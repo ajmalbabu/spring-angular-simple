@@ -1,0 +1,14 @@
+/* app css stylesheet */
+
+/*table tr:nth-child(odd) td{*/
+    /*background-color:green;*/
+/*}*/
+/*table tr:nth-child(even) td{*/
+    /*background-color:gray;*/
+/*}*/
+h2 {
+    text-align: left;
+}
+a {
+    text-align: left;
+}

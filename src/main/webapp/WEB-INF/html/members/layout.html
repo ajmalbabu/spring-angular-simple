@@ -1,0 +1,45 @@
+<div style="text-align:left">
+
+	<h2>
+		Application powered by APIs.
+	</h2>
+
+	<h3>
+		<label>Number of records: </label>
+		<input type="text" id="rs_count" ng-model="rs.count" value="10">
+		<br>
+		<button type="button" class="btn btn-primary" ng-click="fetchMembersList(rs)">Fetch</button>
+
+		<!--<input type="button"-->
+				<!--ng-click="fetchMembersList(rs)"-->
+			   <!--style="font-weight:bold; font-size: 25px;" value="Fetch." />-->
+	</h3>
+
+	<div style="text-align:left">
+		<label>Time to process data by API in seconds: <span style="color:red" ng-bind="rs.backEndTime"></span></label>
+		<br>
+		<label>Total Time to render application in seconds: <span style="color:red" ng-bind="rs.totalTime"></span></label>
+		<br><br>
+	</div>
+</div>
+
+
+<br>
+
+<div class="alert alert-info" ng-show="members.length == 0">No Members found</div>
+<table border=1>
+	<tr>
+		<th>Country Name</th>
+		<th>Population</th>
+		<th>Capital</th>
+		<th>Currency</th>
+	</tr>
+	<tbody>
+		<tr ng-repeat="item in result" my-post-repeat-directive>
+			<td>{{item.countryName}}</td>
+			<td>{{item.population}}</td>
+			<td>{{item.capital}}</td>
+			<td>{{item.currency}}</td>
+		</tr>
+	</tbody>
+</table>
